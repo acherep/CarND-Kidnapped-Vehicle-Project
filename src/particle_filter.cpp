@@ -43,9 +43,6 @@ void ParticleFilter::init(double x, double y, double theta, double std[]) {
     particle.weight = 1.;
 
     particles.push_back(particle);
-    //    cout << "Sample " << particle.id << " " << particle.x << " " <<
-    //    particle.y
-    //         << " " << particle.theta << "" << particle.weight << endl;
   }
 
   is_initialized = true;
@@ -91,10 +88,6 @@ void ParticleFilter::prediction(double delta_t, double std[], double velocity,
     particle.x = x + dist_x(gen);
     particle.y = y + dist_y(gen);
     particle.theta = theta + dist_theta(gen);
-
-    //    cout << i << ": " << particle.id << "" << particle.x << " " <<
-    //    particle.y
-    //         << " " << particle.theta << endl;
   }
 }
 
